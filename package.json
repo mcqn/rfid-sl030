@@ -3,6 +3,7 @@
   "description": "Access an SL018 RFID reader on a Raspberry Pi",
   "keywords": [
     "rfid",
+    "i2c",
     "raspberry pi"
   ],
   "version": "0.0.1",
