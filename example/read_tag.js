@@ -1,12 +1,12 @@
-// Simple test program to show use of the rfid-sl018 module
+// Simple test program to show reading from a tag with the rfid-sl018 module
 // (c) Copyright 2014 MCQN Ltd
 //
 // Tries to read a tag.  If one is detected, it prints out some basic
-// details about the tag.
+// details about the tag and then reads each block and outputs its contents.
 //
 // See README.md for more details.
 // Usage:
-//    sudo node scan_tag.js
+//    sudo node read_tag.js
 
 var rfid_sl018 = require('rfid-sl018');
 
@@ -23,12 +23,23 @@ if (tag) {
     console.log("- UID string: "+tag.tagIDString);
     console.log("- Type: "+tag.tagType);
 
-    var block = 3;
-    // Need to authenticate first
-    if (rfid.authenticate(rfid.sectorForBlock(block))) {
-        console.log(rfid.readBlock(block));
-    } else {
-        console.log("Failed to authenticate");
+    var sector = null;
+    var authenticated = false;
+    for (var block = 0; block < 64; block++) {
+        if (sector != rfid.sectorForBlock(block)) {
+            // You need to authenticate with the sector before
+            // you can access the blocks in it
+            sector = rfid.sectorForBlock(block);
+            if (rfid.authenticate(sector)) {
+                authenticated = true;
+            } else {
+                authenticated = false;
+                console.log("Failed to authenticate");
+            }
+        }
+        if (authenticated) {
+            console.log("Sector "+sector+" Block "+block+": "+rfid.readBlock(block).inspect());
+        }
     }
 } else {
     console.log("Couldn't read tag");
