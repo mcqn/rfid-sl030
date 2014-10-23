@@ -1,4 +1,4 @@
-// Simple test program to show reading from a tag with the rfid-sl018 module
+// Simple test program to show reading from a tag with the rfid-sl030 module
 // (c) Copyright 2014 MCQN Ltd
 //
 // Tries to read a tag.  If one is detected, it prints out some basic
@@ -8,10 +8,10 @@
 // Usage:
 //    sudo node read_tag.js
 
-var rfid_sl018 = require('rfid-sl018');
+var rfid_sl030 = require('rfid-sl030');
 
 // Create and initialise a reader
-var rfid = new rfid_sl018.RFID_SL018();
+var rfid = new rfid_sl030.RFID_SL030();
 rfid.init();
 
 // Try to find a tag

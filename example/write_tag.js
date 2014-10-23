@@ -9,10 +9,10 @@
 // Usage:
 //    sudo node write_tag.js
 
-var rfid_sl018 = require('rfid-sl018');
+var rfid_sl030 = require('rfid-sl030');
 
 // Create and initialise a reader
-var rfid = new rfid_sl018.RFID_SL018();
+var rfid = new rfid_sl030.RFID_SL030();
 rfid.init();
 
 // Try to find a tag

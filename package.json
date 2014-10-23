@@ -1,12 +1,12 @@
 {
-  "name": "rfid-sl018",
-  "description": "Access an SL018 RFID reader on a Raspberry Pi",
+  "name": "rfid-sl030",
+  "description": "Access an SL030 RFID reader on a Raspberry Pi",
   "keywords": [
     "rfid",
     "i2c",
     "raspberry pi"
   ],
-  "version": "0.0.3",
+  "version": "0.0.5",
   "author": {
     "name": "MCQN Ltd",
     "email": "adrianm@mcqn.com",
@@ -14,18 +14,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:mcqn/rfid-sl018.git"
+    "url": "git@github.com:mcqn/rfid-sl030.git"
   },
-  "main": "./lib/rfid-sl018.js",
+  "main": "./lib/rfid-sl030.js",
   "dependencies": {
     "ffi": "~1.2.7",
     "sleep": "~1.1.8",
     "ref-struct": "~0.0.6"
   },
   "bugs": {
-    "url": "https://github.com/mcqn/rfid-sl018/issues"
+    "url": "https://github.com/mcqn/rfid-sl030/issues"
   },
-  "homepage": "https://github.com/mcqn/rfid-sl018",
+  "homepage": "https://github.com/mcqn/rfid-sl030",
   "_npmUser": {
     "name": "amcewen",
     "email": "info@mcqn.com"
