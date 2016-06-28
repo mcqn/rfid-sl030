@@ -7,7 +7,7 @@
     "raspberry pi"
   ],
   "license": "Apache-2.0",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "author": {
     "name": "MCQN Ltd",
     "email": "adrianm@mcqn.com",
@@ -21,7 +21,7 @@
   "dependencies": {
     "ffi": "~1.2.7",
     "ref": "~0.3.2",
-    "sleep": "~1.1.8",
+    "sleep": ">=1.1.8",
     "ref-struct": "~0.0.6",
     "exec-sync": "~0.1.6"
   },
