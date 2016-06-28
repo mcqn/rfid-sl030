@@ -6,6 +6,7 @@
     "i2c",
     "raspberry pi"
   ],
+  "license": "Apache-2.0",
   "version": "0.0.8",
   "author": {
     "name": "MCQN Ltd",
