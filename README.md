@@ -7,7 +7,9 @@ Because of how the library accesses the i2c bus, it needs to be run as root.  Th
     sudo modprobe -r i2c-bcm2708
     sudo modprobe i2c-bcm2708 baudrate=200000
 
-## Raspberry Pi 1 Users
+## Creating libbcm2835.so
 
-If you're running on a Raspberry Pi 1 or a Pi Zero you'll need to change the version of libbcm2835.so that you're using.  In the ```lib/``` folder, rename the current libbcm2835.so to libbcm2835.so.rp2 and then rename the current libbcm2835.so.rp1 to libbcm2835.so
+1. Download and build [Mike McCauley's libbcm2835 library](http://www.airspayce.com/mikem/bcm2835/)
+1. By default that creates a src/libbcm2835.a, whereas we want a .so.  To create that, run this in the bcm2835-1.50 directory:
+    gcc -shared -o src/libbcm2835.so -fPIC src/bcm2835.c
 

@@ -6,7 +6,7 @@
     "i2c",
     "raspberry pi"
   ],
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": {
     "name": "MCQN Ltd",
     "email": "adrianm@mcqn.com",
@@ -19,8 +19,10 @@
   "main": "./lib/rfid-sl030.js",
   "dependencies": {
     "ffi": "~1.2.7",
+    "ref": "~1.0.2",
     "sleep": "~1.1.8",
-    "ref-struct": "~0.0.6"
+    "ref-struct": "~0.0.6",
+    "exec-sync": "~0.1.6"
   },
   "bugs": {
     "url": "https://github.com/mcqn/rfid-sl030/issues"
